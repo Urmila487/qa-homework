@@ -1,0 +1,11 @@
+body {
+  padding-top: 50px;
+}
+
+navbar {
+  background-color: #bc2311;
+}
+.ui-test {
+  padding: 40px 15px;
+  text-align: center;
+}
