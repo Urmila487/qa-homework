@@ -1,0 +1,28 @@
+{
+  "name": "qa-homework",
+  "version": "1.0.0",
+  "description": "<!-- PROJECT LOGO -->\r <br />\r <p align=\"center\">\r   <img src=\"assets/img/logo.jpeg\" alt=\"Logo\" width=\"80\" height=\"80\">\r   <h3 align=\"center\">Homework for Automation QA positions</h3>\r </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.pixelmatic.com/pixelmatic-public/homeworks/qa-homework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^8.2.0",
+    "cypress-plugin-snapshots": "^1.4.4"
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.2.0"
+  },
+
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+
+}
