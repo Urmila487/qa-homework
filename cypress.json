@@ -1,4 +1,5 @@
 {
+  "testFiles": "**/*.feature",
   "projectId": "1kfqto",
   "reporter": "cypress-multi-reporters",
     "reporterOptions": {
