@@ -15,9 +15,13 @@ npm install --global http-server
 ```
 ## Clone this repository
 ```
-git clone https://gitlab.pixelmatic.com/pixelmatic-public/homeworks/qa-homework.git
+git clone https://github.com/Urmila487/qa-homework.git
 ```
 ## Start the local server from the repo
 ```
 npx http-server qa-homework/
+```
+## Install yarn (For package.json all dependencies download)
+```
+yarn install 
 ```
