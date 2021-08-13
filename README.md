@@ -34,7 +34,7 @@ cypress/integration/Site3.feature
 
 ## To Run Gherkin-Cucumber file (.feature) file
 ```
-In terminal Run Command **npx cypress open**
+In terminal Run Command-     npx cypress open
 
 ```
 ## Test Runner - Click to Run (.feature) file
