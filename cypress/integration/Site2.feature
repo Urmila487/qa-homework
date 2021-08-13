@@ -1,74 +1,73 @@
-Feature: Site 2 (http://192.168.1.7:8080) All TestCase added 
+Feature: Site 2 (http://192.168.1.7:8080) All TestCases added
 
     Verify All TestCases in Site (http://192.168.1.7:8080)
 
-    Background: 
-        Given Open the Website
+    Background:
+        Given Open Website
 
     Scenario: Title should be "UI Testing Site"
 
-        Then Validate title of UI Testing Site
+        Then Validate UI Testing Site title
 
     Scenario: Company Logo should be visible
 
-        When Company Logo should be visible display
+        When Company Logo is visible
         Then Get Screenshot of company logo
 
     Scenario: Click Home button and Navigate to Home page
-        
-        When Home button should be visible
-        When Click to Home button
-        Then Navigate to Home Page and Home Page display
 
-    Scenario: Click Home button and Home text highlighted and active display
-        
-        When Home button should be visible and Click on it
-        When Home button should be active display and validate to active status
-        Then Home button text Highlight display
+        When Home button should be visible
+        When Click Home button
+        Then Page will get navigated to Home Page
+
+    Scenario: Click on Home button and "Home" text gets Highlighted and active display
+
+        When Home button is visible click Home button
+        When Home button is active display and validate to active status
+        Then Home button text gets Highlighted
 
     Scenario: Click Form button and Navigate to Form page
-    
-        When Form button should be visible
-        And Click to Form button
-        Then Navigate to Form Page and Form Page display
 
-    Scenario: Click Form button and Form text highlighted and active display
-       
-        When Form button should be visible and Click on it
-        When Form button active display validate to active status
-        Then Form button text Highlight display
+        When Form button should be visible
+        And Click on Form button
+        Then Page will navigate to Form Page
+
+    Scenario: Click Form button and form text form should turn to active status
+
+        When Click Form button
+        Then Form should turn to active status
 
     Scenario: Click Error button and get a 404 HTTP response code
-       
-        When Error button should be visible
-        And Click to Error button
-        Then Navigate to Error Page and get a 404 HTTP response code
 
-    Scenario: Click UI Testing button and Navigate to Home page
-        
+        When Click to Error button
+        Then I should get 404 HTTP response code
+
+    Scenario: Click on UI Testing button and Navigate to Home page
+
         When UI Testing button should be visible
         When Click to UI Testing button
-        Then Navigate to Home Page and Home Page display
+        Then Page will get navigated to Home page
 
-    Scenario: Check in Home page h1 tag Welcome to Pixelmatic QA department text visible
-  
+
+    Scenario: "Welcome to Pixelmatic QA department" text should be visible on  in <h1> tag on Home page
+
         When Home button should be visible
-        Then Validate h1 tag and Welcome to Pixelmatic QA department text visible
+        Then Welcome to Pixelmatic QA department text should be visible on  in <h1> tag on Home page
 
-    Scenario: Check in Home page p tag "This site is dedicated to perform.." text display
-       
+    Scenario: Check in Home page <p> tag "This site is dedicated to perform.." text should be visible on Home screen
+
         When Home button should be visible
-        Then Validate p tag and This site is dedicated to perform text visible
-
-    Scenario: Check in Form Page one input box and one submit button display
+        Then Validate <p> tag and This site is dedicated to perform some exercises and demonstrate automated web testing text visible
         
+    Scenario: Check in Form Page one input box and one submit button display
+
         When Form button should be visible and Click on it
         When Form Page Simple Form Submission text display
-        And Form Page one Input box Enable and Visible display 
+        And Form Page one Input box Enable and Visible display
         Then Form Page one Submit button Enable and Visible display
 
-    Scenario: Check in Form Page Enter Value in input box and Click submit button,then Page redirect and  Hello ! text display
-       
+    Scenario: On form page in input text type <value> and submit the form
+
         When Form button should be visible and Click on it
         When Form button Simple Form Submission text display
         When Enter "John" in input box

@@ -17,7 +17,9 @@
  */
 // eslint-disable-next-line no-unused-vars
 const { initPlugin } = require('cypress-plugin-snapshots/plugin');
+
 const cucumber = require("cypress-cucumber-preprocessor").default; // eslint-disable-line
+
 module.exports = (on, config) => {
   on("file:preprocessor", cucumber());
   initPlugin(on, config);

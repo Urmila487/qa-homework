@@ -1,4 +1,5 @@
 {
+  "projectId": "1kfqto",
   "reporter": "cypress-multi-reporters",
     "reporterOptions": {
         "reporterEnabled": "mochawesome",
@@ -15,6 +16,6 @@
   "ignoreTestFiles": [
     "**/__snapshots__/*",
     "**/__image_snapshots__/*"
-  ],
-  "projectId": "1kfqto"
+  ]
+  
 }

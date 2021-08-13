@@ -8,21 +8,21 @@ const homepage  = new Homepage()
 const formpage = new Formpage()
 const errorpage = new Errorpage()
 
-Given('Open the Website', () => {
+Given('Open Website', () => {
     cy.visit('http://172.19.192.1:8080/')
   });
 
-    Then('Validate title of UI Testing Site', () => {
+    Then('Validate UI Testing Site title', () => {
       homepage.getTitle().should('include','UI Testing Site').should('eq', 'UI Testing Site')
   });
 
 
   
-Given('Open the Website', () => {
+Given('Open Website', () => {
     cy.visit('http://172.19.192.1:8080/')
   });
   
-    When('Company Logo should be visible display', () => {
+    When('Company Logo is visible', () => {
       logo.getLogo().should('be.visible') //To check Logo is display and Capture Snapshot         
   })
   
@@ -31,7 +31,7 @@ Given('Open the Website', () => {
   });
 
 
-Given('Open the Website', () => {
+Given('Open Website', () => {
     cy.visit('http://172.19.192.1:8080/')
   });
 
@@ -39,33 +39,33 @@ Given('Open the Website', () => {
       homepage.home().should('be.visible')  
   })
 
-    When('Click to Home button', () => {
+    When('Click Home button', () => {
       homepage.home().contains('Home').click()  
   })
 
-    Then('Navigate to Home Page and Home Page display', () => {
+    Then('Page will get navigated to Home Page', () => {
       homepage.homePageText().should('be.visible') 
   });
 
 
-Given('Open the Website', () => {
+Given('Open Website', () => {
     cy.visit('http://172.19.192.1:8080/')
   });
 
-    When('Home button should be visible and Click on it', () => {
+    When('Home button is visible click Home button', () => {
       homepage.home().should('be.visible').contains('Home').click()  
   })
 
-    When('Home button should be active display and validate to active status', () => {
+    When('Home button is active display and validate to active status', () => {
       homepage.active().click({ force: true })  
   })
 
-    Then('Home button text Highlight display', () => {
+    Then('Home button text gets Highlighted', () => {
       homepage.home().should('have.css', 'color', 'rgb(255, 255, 255)').should('not.have.css','color','rgb(157,157,157)')
   });
 
 
-Given('Open the Website', () => {
+Given('Open Website', () => {
     cy.visit('http://172.19.192.1:8080/')
   });
 
@@ -73,50 +73,43 @@ Given('Open the Website', () => {
       formpage.form().should('be.visible')  
   })
 
-    And('Click to Form button', () => {
+    And('Click on Form button', () => {
       formpage.form().contains('Form').click()  
   })
 
-    Then('Navigate to Form Page and Form Page display', () => {
+    Then('Page will navigate to Form Page', () => {
       formpage.formPageText().should('be.visible') 
   });
 
 
-Given('Open the Website', () => {
+Given('Open Website', () => {
     cy.visit('http://172.19.192.1:8080/')
   });
 
-    When('Form button should be visible and Click on it', () => {
+    When('Click Form button', () => {
       formpage.form().should('be.visible').contains('Form').click()  
   })
 
-    When('Form button active display validate to active status', () => {
+    Then('Form should turn to active status', () => {
       formpage.active().click({ force: true })  
   })
 
-    Then('Form button text Highlight display', () => {
-      formpage.form().should('have.css', 'color', 'rgb(255, 255, 255)').should('not.have.css','color','rgb(157,157,157)')
-  });
 
 
-Given('Open the Website', () => {
+Given('Open Website', () => {
     cy.visit('http://172.19.192.1:8080/')
   });
 
-    When('Error button should be visible', () => {
-      errorpage.error().should('be.visible')  
-  })
-
-    And('Click to Error button', () => {
+    When('Click to Error button', () => {
       errorpage.error().contains('Error').click()  
   })
 
-    Then('Navigate to Error Page and get a 404 HTTP response code', () => {
+    Then('I should get 404 HTTP response code', () => {
       errorpage.errorPageText().should('be.visible') 
   });
 
 
-Given('Open the Website', () => {
+Given('Open Website', () => {
     cy.visit('http://172.19.192.1:8080/')
   });
 
@@ -128,12 +121,12 @@ Given('Open the Website', () => {
       homepage.uiTesting().contains('UI Testing').click()  
   })
 
-    Then('Navigate to Home Page and Home Page display', () => {
+    Then('Page will get navigated to Home page', () => {
       homepage.homePageText().should('be.visible') 
   });
 
 
-Given('Open the Website', () => {
+Given('Open Website', () => {
     cy.visit('http://172.19.192.1:8080/')
   });
 
@@ -141,12 +134,12 @@ Given('Open the Website', () => {
       homepage.home().should('be.visible')  
   })
 
-    Then('Validate h1 tag and Welcome to Pixelmatic QA department text visible', () => {
+    Then('Welcome to Pixelmatic QA department text should be visible on  in <h1> tag on Home page', () => {
       homepage.homePageText().should('be.visible') 
   });
 
 
-Given('Open the Website', () => {
+Given('Open Website', () => {
     cy.visit('http://172.19.192.1:8080/')
   });
 
@@ -154,12 +147,12 @@ Given('Open the Website', () => {
       homepage.home().should('be.visible')  
   })
 
-    Then('Validate p tag and This site is dedicated to perform text visible', () => {
+    Then('Validate <p> tag and This site is dedicated to perform some exercises and demonstrate automated web testing text visible', () => {
       homepage.homePageTextP().should('be.visible') 
   });
 
 
-Given('Open the Website', () => {
+Given('Open Website', () => {
     cy.visit('http://172.19.192.1:8080/')
   });
 
@@ -180,7 +173,7 @@ Given('Open the Website', () => {
   });
 
 
-Given('Open the Website', () => {
+Given('Open Website', () => {
     cy.visit('http://172.19.192.1:8080/')
   });
 
