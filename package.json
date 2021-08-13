@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.pixelmatic.com/pixelmatic-public/homeworks/qa-homework.git"
+    "url": "https://github.com/Urmila487/qa-homework.git"
   },
   "keywords": [],
   "author": "",
@@ -18,12 +18,7 @@
     "cypress-plugin-snapshots": "^1.4.4"
   },
   "devDependencies": {
-    "cypress-cucumber-preprocessor": "^4.2.0",
-    "cypress-multi-reporters": "^1.5.0",
-    "mocha": "^9.0.3",
-    "mochawesome": "^6.2.2",
-    "mochawesome-merge": "^4.2.0",
-    "mochawesome-report-generator": "^5.2.0"
+    "cypress-cucumber-preprocessor": "^4.2.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true

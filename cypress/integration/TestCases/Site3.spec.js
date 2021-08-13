@@ -84,16 +84,16 @@ describe('Site 3 ("http://127.0.0.1:8080") - All Test Cases',function(){
         formpage.formPageText()  // To check Simple Form submission text display
         formpage.forminput().should('be.visible').should('be.enabled').type('John') //To check input box visible and enable
         formpage.formsubmit().should('be.visible').should('be.enabled').click() //To check Submit button visible and enable
-        formpage.helloPagetext().contains('Hello John!')
-        cy.go(-1)
+        formpage.helloPagetext().contains('Hello John!')  // To check hello page "Hello John!" text display
+        cy.go(-1)                                        //Go to Browser back button and Click
         formpage.forminput().clear().type('Sophia')
         formpage.formsubmit().click()
         formpage.helloPagetext().contains('Hello Sophia!')
-        cy.go(-1)
+        cy.go(-1)                                        //Go to Browser back button and Click
         formpage.forminput().clear().type('Charlie')
         formpage.formsubmit().click()
         formpage.helloPagetext().contains('Hello Charlie!')
-        cy.go(-1)
+        cy.go(-1)                                        //Go to Browser back button and Click
         formpage.forminput().clear().type('Emily')
         formpage.formsubmit().click()
         formpage.helloPagetext().contains('Hello Emily!')
