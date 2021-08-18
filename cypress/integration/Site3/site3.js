@@ -1,3 +1,4 @@
+import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 import Homepage from '../pageObjects/homepage'
 import Logo from '../pageObjects/logo'
 import Formpage from '../pageObjects/formpage'
@@ -181,65 +182,17 @@ Given('Open Website', () => {
       formpage.form().should('be.visible').contains('Form').click()  
   })
 
-    When('Form button Simple Form Submission text display', () => {
+    And('Form button Simple Form Submission text display', () => {
       formpage.formPageText()  
   })
 
-    When('Enter "John" in input box', () => {
-      formpage.forminput().should('be.visible').should('be.enabled').type('John')  
-  })
+    Then('Enter name in input box and submit the form',datatable => {
+      datatable.hashes().forEach(element => {
+        formpage.forminput().type(element.name);
+        formpage.formsubmit().should('be.visible').should('be.enabled').click()
+        formpage.helloPagetext().contains('Hello').contains(element.name)
+        cy.go('back')
+        formpage.forminput().clear()
+      })
 
-    And('Click to Submit button', () => {
-      formpage.formsubmit().should('be.visible').should('be.enabled').click()  
-  })
-
-    Then('Hello Page "Hello John!" text display', () => {
-      formpage.helloPagetext().contains('Hello John!') 
-  })
-
-    Then('Click to Back browser button', () => {
-      cy.go(-1) 
-  })
-
-    Then('Clear input box', () => {
-      formpage.forminput().clear()
-  })
-    When('Enter "Sophia" in input box', () => {
-      formpage.forminput().type('Sophia') 
-  })
-    And('Click to Submit button', () => {
-      formpage.formsubmit().should('be.visible').should('be.enabled').click()  
-  })
-    Then('Hello Page "Hello Sophia!" text display', () => {
-      formpage.helloPagetext().contains('Hello Sophia!') 
-  })
-    Then('Click to Back browser button', () => {
-      cy.go(-1) 
-  })
-    Then('Clear input box', () => {
-      formpage.forminput().clear() 
-  })
-    When('Enter "Charlie" in input box', () => {
-      formpage.forminput().type('Charlie') 
-  })
-    And('Click to Submit button', () => {
-      formpage.formsubmit().should('be.visible').should('be.enabled').click() 
-  })
-    Then('Hello Page "Hello Charlie!" text display', () => {
-      formpage.helloPagetext().contains('Hello Charlie!') 
-  })
-    Then('Click to Back browser button', () => {
-      cy.go(-1) 
-  })
-    Then('Clear input box', () => {
-      formpage.forminput().clear() 
-  })
-    When('Enter "Emily" in input box', () => {
-      formpage.forminput().type('Emily') 
-  })
-    And('Click to Submit button', () => {
-      formpage.formsubmit().should('be.visible').should('be.enabled').click() 
-  })
-    Then('Hello Page "Hello Emily!" text display', () => {
-      formpage.helloPagetext().contains('Hello Emily!') 
   })

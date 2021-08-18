@@ -66,25 +66,15 @@ Feature: Site 2 (http://192.168.1.7:8080) All TestCases added
         And Form Page one Input box Enable and Visible display
         Then Form Page one Submit button Enable and Visible display
 
-    Scenario: On form page in input text type <value> and submit the form
+    Scenario: On form page in input text type name and submit the form
 
         When Form button should be visible and Click on it
-        When Form button Simple Form Submission text display
-        When Enter "John" in input box
-        And Click to Submit button
-        Then Hello Page "Hello John!" text display
-        Then Click to Back browser button
-        Then Clear input box
-        When Enter "Sophia" in input box
-        And Click to Submit button
-        Then Hello Page "Hello Sophia!" text display
-        Then Click to Back browser button
-        Then Clear input box
-        When Enter "Charlie" in input box
-        And Click to Submit button
-        Then Hello Page "Hello Charlie!" text display
-        Then Click to Back browser button
-        Then Clear input box
-        When Enter "Emily" in input box
-        And Click to Submit button
-        Then Hello Page "Hello Emily!" text display
+        And Form button Simple Form Submission text display
+        Then Enter name in input box and submit the form
+        | name    |
+        | John    |
+        | Sophia  |
+        | Charlie |
+        | Emily   |
+        
+        
